@@ -1,0 +1,149 @@
+:root {
+    --yasil: #54d154;
+}
+html {
+    scroll-behavior: smooth;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background: url('../img/headerbg.jpg') center/cover;
+}
+
+h1 {
+    font: bold 2em 'Montserrat';
+    color: #fff;
+}
+h2 {
+    font: 1.25em Montserrat;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #818181
+}
+h3 {
+    font: 700 1.5em 'Proxima Nova';
+    color: #828181;
+    padding: 1em;
+}
+h6 {
+    font: 1em 'Myriad Pro';
+    color: #b3b3b3;
+}
+hr {
+    width: 43px;
+    height: 2px;
+    background-color: #818181;
+    border: none;
+}
+#menu li a {
+    font: 700 1em 'Proxima Nova';
+    color: #fff;
+    padding: 10px;
+    white-space: nowrap;
+}
+#search {  display: flex; }
+#search input, #search button { 
+    height: 27px;
+    background: #ffffffcc;
+    border: none;
+    outline: none;
+    padding: 6px 16px;
+}
+#search input { border-radius: 1em 0 0 1em; }
+#search button { border-radius: 0 1em 1em 0; }
+#search img { width: 14px;}
+
+main > section {
+    text-align: center;
+    padding: 40px 0;
+}
+.bg-yasil { background-color: var(--yasil) }
+.bg-ag { background-color: #fff }
+.bg-boz { background-color: #f2f1f1 }
+
+.bg-yasil h2 { color: #1f7b1f }
+.bg-yasil h6 { color: #2b9b2b }
+.bg-yasil hr { background-color: #1f7b1f }
+
+.row { padding: 40px 0}
+.row article { padding: 20px}
+.icon { 
+    display: flex;
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: #e0f3e0;
+    margin: auto;
+}
+.icon i {
+    margin: auto;
+    font-size: 3em;
+    color: var(--yasil)
+} 
+.btns { 
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.btns button {
+    border: 1px solid #2b9b2b;
+    background-color: #fff;
+    font: 1em 'Proxima Nova';
+    color: #2b9b2b;
+    padding: 10px 20px;
+}
+.btns button.active, .btns button:hover  { 
+    background-color: #2b9b2b; 
+    color: #fff
+}
+.btns button:first-child { border-radius: 20px 0 0 20px;}
+.btns button:last-child { border-radius: 0 20px 20px 0;}
+
+#gallery { padding: 10px;}
+#gallery img { 
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    margin: 15px;
+}
+
+
+@media only screen and (min-width: 768px) {
+    nav { 
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    #menu {
+        display: flex;
+        order: -1
+    }
+    #search { justify-content: end; }
+    #menu, #search { width: 40%;}
+    h1 { font-size: 3.4em }
+    .row { display: flex; justify-content: center;}
+    .row article { flex: 0 1 30%}
+    .icon { 
+        width: 140px;
+        height: 140px;
+        border-radius: 30px;
+    }
+    .icon i {
+        font-size: 4em;
+    }
+    #gallery {
+        max-width: 980px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    } 
+    #gallery img { 
+        width: 160px;
+        height: 160px;
+    }
+}
